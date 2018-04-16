@@ -1,0 +1,279 @@
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-attachment: fixed;
+    background-image: url('/Images/general-mobile.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-family: Helvetica, Arial, sans-serif;
+    margin-bottom: 75px;
+}
+
+h1 {
+    font-size: 8vw;
+    margin: 2vh auto;
+    text-align: center;
+    width: 80vw;
+}
+
+#weather-box {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    justify-content: space-evenly;
+    margin: 0 auto;
+    text-align: center;
+    width: 60vw;
+}
+
+#location {
+    margin: 0;
+}
+
+#location, #temperature-container, #main-weather, #weather-description {
+    font-size: 6vw;
+}
+
+#weather-icon {
+    height: 50px;
+    width: 50px;
+}
+
+#more-weather-details {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    color: white;
+    font-size: 5vw;
+    height: 100%;
+    margin: 2vh auto 0 auto;
+    padding: 0.5rem 1rem;
+    text-align: left;
+    width: 60%;
+}
+
+#more-weather-toggle {
+    cursor: pointer;
+    display: flex;
+    margin: 3vh auto;
+}
+
+#details-toggle {
+    width: 50%
+}
+
+#image-toggle {
+    width: 50%;
+}
+
+#more-weather-toggle-image {
+    height: 5vw;
+    width: 5vw;
+}
+
+#more-weather-contents-container {
+    display: none;
+    overflow: hidden;
+    width: 100%;
+}
+
+#more-weather-contents {
+    border-top: 1px solid white;
+    display: flex;
+    flex-direction: column;
+    padding: 2vh 0;
+    text-align: left;
+    width: 100%;
+}
+
+#more-weather-contents p {
+    margin: 1vh 1rem;
+}
+
+a {
+    color: blue;
+}
+
+button {
+    cursor: pointer;
+}
+
+#footer {
+    background: black;
+    bottom: 0;
+    color: white;
+    font-size: 2.5vw;
+    height: auto;
+    left: 0;
+    margin-bottom: 0px;
+    position: fixed;
+    right: 0;
+    text-align: right;
+}
+
+#footer a {
+    color: lightBlue;
+}
+
+@media (orientation: landscape) {
+    h1 {
+        font-size: 8vh;
+        margin: 2vh auto;
+        width: 80vw;
+    }
+
+    #header {
+        margin-top: 5vh;
+    }
+    
+    #weather-box {
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 0 auto;
+        width: 70vw;
+    }
+
+    #temperature-container {
+        margin-top: 2%;
+    }
+    
+    #location, #temperature-container,
+    #main-weather, #weather-description {
+        font-size: 4vh;
+    }
+    
+    #main-weather {
+        font-size: 4vh;
+        margin: 0;
+    }
+    
+    #weather-icon {
+        height: 50px;
+        visibility: visible;
+        width: 50px;
+    }
+    
+    #description-container {
+        margin: 0 auto;
+    }
+    
+    #more-weather-details {
+        height: 100%;
+        margin: 0 auto;
+        padding: 1rem 1rem;
+        width: 80%;
+    }
+    
+    #more-weather-toggle {
+        cursor: pointer;
+        font-size: 3vh;
+        margin: 2vh auto;
+        padding: 0;
+    }
+
+    #details-toggle {
+        width: 25%;
+        padding: 0;
+    }
+    
+    #image-toggle {
+        width: 75%;
+    }
+    
+    #more-weather-toggle-image {
+        height: 3.5vw;
+        width: 3.5vw;
+    }
+    
+    #more-weather-contents {
+        flex-direction: row;
+        font-size: 3vh;
+        text-align: center;
+    }
+
+    #more-weather-contents p {
+        margin: 0 1vw;
+    }
+    
+    a {
+        color: blue;
+    }
+    
+    button {
+        cursor: pointer;
+    }
+    
+    #footer {
+    font-size: 1.5vw;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 768px) {
+    h1 {
+        font-size: 9vh;
+    }
+    
+    #weather-box {
+        width: 80vw;
+    }
+    
+    #location, #temperature-container,
+    #main-weather, #weather-description {
+        font-size: 5vh;
+    }
+    
+    #main-weather {
+        font-size: 5vh;
+    }
+    
+    #weather-icon {
+        height: 50px;
+        visibility: visible;
+        width: 50px;
+    }
+    
+    #more-weather-toggle {
+        font-size: 4vh;
+    }
+    
+    #more-weather-contents {
+        font-size: 4vh;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 992px) {
+    h1 {
+        font-size: 10vh;
+    }
+    
+    #weather-box {
+        width: 60vw;
+    }
+    
+    #location, #temperature-container,
+    #main-weather, #weather-description {
+        font-size: 6vh;
+    }
+    
+    #main-weather {
+        font-size: 6vh;
+    }
+    
+    #more-weather-toggle {
+        font-size: 5vh;
+    }
+    
+    #more-weather-contents {
+        font-size: 5vh;
+    }
+    
+    #footer {
+        font-size: 1.2vw;
+    }
+}

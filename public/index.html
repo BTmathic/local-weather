@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <title>Local Weather</title>
+        <link rel='icon' type='image/png' href='./Images/cloud.png'/>
+    </head>
+
+    <body>
+        <div id="container">
+            <div id='header'>
+                <h1>Free Code Camp Weather App</h1>
+            </div>
+
+            <div id='weather-box'>
+                <div id='city-temp-box'>
+                    <p id='location'>Location</p>
+                    <p id='temperature-container'>
+                        <span id='temperature'></span> &ordm;<a href='#' id='convert-degrees'>C</a>
+                    </p>
+                </div>
+                <div id='weather-description-box'>
+                    <span id='main-weather'>
+                        Weather
+                    </span>
+                    <span id='comma'>,</span>&nbsp;
+                    <span id='weather-description'>
+                        Short description
+                    </span>
+                    <span id='image-container'>
+                        <img src='#' alt='weather icon' id='weather-icon' />
+                    </span>
+                </div>
+            </div>
+
+            <div id='more-weather-details'>
+                <span id='more-weather-toggle'>
+                    <span id='details-toggle'>
+                        More Details
+                    </span>
+                    <span id='image-toggle'>
+                        <img src='./Images/wind-open.png' alt='toggle details' id='more-weather-toggle-image'/>
+                    </span>
+                </span>
+                <div id='more-weather-contents-container' class='hide'>
+                    <div id='more-weather-contents'>
+                        <p>
+                            Humidity: <span id='humidity'></span>%
+                        </p>
+                        <p>
+                            Pressure: <span id='pressure'></span> kPa
+                        </p>
+                        <p>
+                            Wind: <span id='wind-speed'></span> km/h
+                            <span id='wind-direction'></span>
+                        </p>
+                        <p>
+                            Wind gusts: <span id='wind-gusts'></span> <span id='wind-gust-units'>km/h</span>
+                        <p>
+                            Sunrise: <span id='sunrise'></span>
+                        </p>
+                        <p>
+                            Sunset: <span id='sunset'></span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id='footer'>
+            <div>Wind icon made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+        </div>
+
+        <script src="./bundle.js"></script>
+    </body>
+</html>
