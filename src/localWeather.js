@@ -5,7 +5,7 @@
  * in case many FCC users pull the data repeatedly
  */
 
-import 'normalize.css/normalize.css'; // reset all browser conventions
+import 'normalize.css/normalize.css';
 import './../public/styles.scss';
 
 import $ from 'jquery';
@@ -51,7 +51,7 @@ function getWeather(city, country, location) {
     const lon = splitLocation[1];
     $.getJSON('https://fcc-weather-api.glitch.me/api/current?lat=' + lat + '&lon=' + lon, (json) => {
         $('#location').html(json.name + ', ' + json.sys.country);
-        $('#temperature').html(json.main.temp);
+        $('#temperature').html(Math.round(json.main.temp));
         $('#main-weather').html(json.weather[0].main);
         $('#weather-icon').attr('src', json.weather[0].icon);
         if (!json.weather[0].icon) {
@@ -147,18 +147,16 @@ $('#more-weather-toggle').click(() => {
 });
 
 // We allow the user to convert between weather in degrees Celsius, and
-// degrees Farenheight. Because dividing by 9 can leave an incorrect rounding
-// we force the return to only have 2 digits after the decimal. We only 
-// do it here because the conversion to Farenheit can only add a single
-// decimal and we do not want to allow rounding error to grow if the user
-// keeps converting between the two options
+// degrees Farenheight. We round to the nearest integer in both cases to both
+// avoid JavaScript errors, and because 21.1 vs. 21.2 or 21.3 isn't exactly 
+// useful to the user when looking up the weather
 $('#convert-degrees').click(() => {
     if ($('#convert-degrees').text() === 'C') {
         $('#convert-degrees').text('F');
-        $('#temperature').html($('#temperature').html()*9/5+32);
+        $('#temperature').html(Math.round($('#temperature').html()*9/5+32));
     } else {
         $('#convert-degrees').text('C');
-        $('#temperature').html( Math.floor(100*($('#temperature').html()-32)*5/9)/100 );
+        $('#temperature').html( Math.round(($('#temperature').html()-32)*5/9) );
     }
 });
 

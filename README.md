@@ -1,11 +1,21 @@
-# local-weather
+# Local Weather
 
-Displays the current weather in the city of the user's IP address (as determined by the ipinfo.io API). The weather API (from fcc-weather-api.glitch.me) is not always reliable and returns cached data for a city in Japan from time to time (possibly in an attempt to prevent an overload of real API calls since this is a free service).
+Gets the IP address of the user visiting the app and posts the weather in that location. The location, weather in Celsius (and Farenheit by click) and a brief description (e.g., Clouds, Rain, Snow, Storm) is given. More details like humidity, pressure, wind and gusts, sunrise and sunset are available in a drop down below the main weather.
 
-However, when the correct data is pulled for the given IP address, temperature, weather, and extra details like winds and gusts are display with a background to adapt around the pulled data as well as an icon matching the description if one is provided by the API.
+### Front End
 
-Built with<ul>
-  <li>jQuery</li>
-  <li>Webpack</li>
-  <li>Yarn</li>
-</ul>
+* jQuery
+
+### Weather API (and weather icons)
+
+* https://fcc-weather-api.glitch.me
+
+### Background images
+
+* https://unsplash.com/
+
+### Build Tools
+
+* Webpack
+* Yarn
+* Babel
